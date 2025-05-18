@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* phần tùy chỉnh thêm */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
