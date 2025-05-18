@@ -1,0 +1,130 @@
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo-img {
+  height: 70px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: red;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.icons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.icon-wrapper {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-link {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px;
+  display: inline-block;
+}
+
+.nav-link.active {
+  color: red;
+}
+
+/* menu dropdown*/
+.dropdown-arrow {
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px 0;
+  min-width: 150px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu span {
+  display: block;
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+.dropdown-menu span:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}

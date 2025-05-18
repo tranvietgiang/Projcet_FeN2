@@ -1,13 +1,19 @@
-import Header from "./components/Header/Header.jsx";
-import Content from "./components/Content/Content.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Login from "./components/Login/Login";
+import Content from "./components/Content/Content";
+import Footer from "./components/Footer/Footer";
+
 function App() {
   return (
-    <>
-      <Header></Header>
-      <Content></Content>
-      <Footer></Footer>
-    </>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Content />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
