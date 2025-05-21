@@ -1,14 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Search, User, Heart, ShoppingCart } from "lucide-react";
+
 import "./Header.css";
 
 export default function Header() {
   const [active, setActive] = useState("Home");
+  const navigate = useNavigate();
 
   const menuItems = [
     {
       name: "Home",
+      path: "/",
       dropdown: ["Option 1", "Option 2"],
     },
     {
@@ -51,7 +54,11 @@ export default function Header() {
             <li
               key={item.name}
               className="nav-item"
-              onClick={() => setActive(item.name)}
+              onClick={() => {
+                setActive(item.name);
+                // Điều hướng đến đường dẫn tương ứng
+                if (item.path) navigate(item.path);
+              }}
             >
               <span
                 className={`nav-link ${active === item.name ? "active" : ""}`}
