@@ -84,15 +84,19 @@ export default function Header() {
       {/* Icons */}
       <div className="icons">
         <Search className="icon" />
-        <Link to="/login">
-          <User className="icon" />
-        </Link>
+        <div className="icon-wrapper">
+          <Link to="/login">
+            <User className="icon" />
+          </Link>
+        </div>
         <div className="icon-wrapper">
           <Heart className="icon" />
           <span className="badge">6</span>
         </div>
         <div className="icon-wrapper">
-          <ShoppingCart className="icon" />
+          <Link to="/cart">
+            <ShoppingCart className="icon" />
+          </Link>
           <span className="badge">0</span>
         </div>
       </div>
