@@ -90,7 +90,9 @@ export default function Header() {
           </Link>
         </div>
         <div className="icon-wrapper">
-          <Heart className="icon" />
+          <Link to="/heart">
+            <Heart className="icon" />
+          </Link>
           <span className="badge">6</span>
         </div>
         <div className="icon-wrapper">
