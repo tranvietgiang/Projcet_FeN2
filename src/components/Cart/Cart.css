@@ -363,3 +363,355 @@ input.input-qty[type="number"]::-webkit-outer-spin-button {
 .rating > input:checked ~ label {
   color: #ffa723;
 }
+/* From Uiverse.io by mrhyddenn */
+.add-to-cart-button {
+  position: relative;
+  margin: 0;
+  padding: 0.8em 1em;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  background-color: #333;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: inherit;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.add-to-cart-button:hover {
+  animation: sh0 0.5s ease-in-out both;
+}
+
+@keyframes sh0 {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: rotate(7deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-7deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+.add-to-cart-button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+.add-to-cart-button::before,
+.add-to-cart-button::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0;
+  transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1),
+    opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+  z-index: -1;
+  transform: translate(100%, -25%) translate3d(0, 0, 0);
+}
+
+.add-to-cart-button:hover::before,
+.add-to-cart-button:hover::after {
+  opacity: 0.15;
+  transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1),
+    opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.add-to-cart-button:hover::before {
+  transform: translate3d(50%, 0, 0) scale(0.9);
+}
+
+.add-to-cart-button:hover::after {
+  transform: translate(50%, 0) scale(1.1);
+}
+
+/*mua ngay*/
+.button-muangay {
+  --width: 170px;
+  --height: 55px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: green;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+}
+
+.button-muangay::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: #555;
+  font-size: 0.9rem;
+  color: #fff;
+  border-radius: 0.25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button-muangay::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #555;
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button-muangay::after,
+.button-muangay::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text-muangay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper-muangay,
+.text-muangay,
+.icon-muangay {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text-muangay {
+  top: 0;
+}
+
+.text-muangay,
+.icon-muangay {
+  transition: top 0.5s;
+}
+
+.icon-muangay {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-muangay svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button-muangay:hover {
+  background: #222;
+}
+
+.button-muangay:hover .text-muangay {
+  top: -100%;
+}
+
+.button-muangay:hover .icon-muangay {
+  top: 0;
+}
+
+.button-muangay:hover:before,
+.button-muangay:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button-muangay:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button-muangay:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+/*thich*/
+.btn-17-thich,
+.btn-17-thich *,
+.btn-17-thich :after,
+.btn-17-thich :before,
+.btn-17-thich:after,
+.btn-17-thich:before {
+  border: 0 solid;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-17-thich {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #dc3545;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.btn-17-thich:disabled {
+  cursor: default;
+}
+
+.btn-17-thich:-moz-focusring {
+  outline: auto;
+}
+
+.btn-17-thich svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-17-thich [hidden] {
+  display: none;
+}
+
+.btn-17-thich {
+  border-radius: 99rem;
+  border-width: 2px;
+  padding: 0.8rem 3rem;
+  z-index: 0;
+}
+
+.btn-17-thich,
+.btn-17-thich .text-container-thich {
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-17-thich .text-container-thich {
+  display: block;
+  mix-blend-mode: difference;
+}
+
+.btn-17-thich .text-thich {
+  display: block;
+  position: relative;
+}
+
+.btn-17-thich:hover .text-thich {
+  -webkit-animation: move-up-alternate 0.3s forwards;
+  animation: move-up-alternate 0.3s forwards;
+}
+
+@-webkit-keyframes move-up-alternate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(80%);
+  }
+
+  51% {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-up-alternate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(80%);
+  }
+
+  51% {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.btn-17-thich:after,
+.btn-17-thich:before {
+  --skew: 0.2;
+  background: #fff;
+  content: "";
+  display: block;
+  height: 102%;
+  left: calc(-50% - 50% * var(--skew));
+  pointer-events: none;
+  position: absolute;
+  top: -104%;
+  transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+
+.btn-17-thich:after {
+  --progress: 0%;
+  left: calc(50% + 50% * var(--skew));
+  top: 102%;
+  z-index: -1;
+}
+
+.btn-17-thich:hover:before {
+  --progress: 100%;
+}
+
+.btn-17-thich:hover:after {
+  --progress: -102%;
+}
+
+.size-cart {
+  width: 170px;
+  height: 55px;
+}

@@ -215,10 +215,64 @@ export default function Content() {
             style={{ transform: "translateY(-50%)", padding: "0px 20px" }}
           >
             <button onClick={handlePrev} aria-label="Previous collection">
-              ←
+              <div class="styled-wrapper-button-left">
+                <button class="button-button-left">
+                  <div class="button-box-button-left">
+                    <span class="button-elem-button-left">
+                      <svg
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="arrow-icon"
+                      >
+                        <path
+                          fill="black"
+                          d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <span class="button-elem-button-left">
+                      <svg
+                        fill="black"
+                        viewBox="0 0  24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="arrow-icon-button-left"
+                      >
+                        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
+                      </svg>
+                    </span>
+                  </div>
+                </button>
+              </div>
             </button>
             <button onClick={handleNext} aria-label="Next collection">
-              →
+              <div class="styled-wrapper-button-left">
+                <button class="button-button-left">
+                  <div class="button-box-button-left">
+                    <span class="button-elem-button-left">
+                      <svg
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="arrow-icon"
+                      >
+                        <path
+                          fill="black"
+                          d="M4 13h12.17l-5.59 5.59L12 20l8-8-8-8-1.41 1.41L16.17 11H4v2z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <span class="button-elem-button-left">
+                      <svg
+                        fill="black"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="arrow-icon-button-left"
+                      >
+                        <path d="M4 13h12.17l-5.59 5.59L12 20l8-8-8-8-1.41 1.41L16.17 11H4v2z"></path>
+                      </svg>
+                    </span>
+                  </div>
+                </button>
+              </div>
             </button>
           </div>
         </section>
@@ -350,10 +404,7 @@ export default function Content() {
               ))}
             </p>
 
-            <button
-              style={{ marginLeft: 70 }}
-              className="btn btn-outline-danger text-uppercase"
-            >
+            <button style={{ marginLeft: 70 }} className="light text-uppercase">
               explore now
             </button>
           </div>
