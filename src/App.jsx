@@ -7,7 +7,10 @@ import Cart from "./components/Cart/Cart";
 import Heart from "./components/ClothingSalePage/ClothingSalePage";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Content_ca from "./components/Content/Content_ca";
-
+import Cart_page from "./components/Cart-page/Cart-page";
+import Checkout from "./components/Checkout/Checkout";
+import Success from "./components/Success/Success";
+import ProductDetail from "./components/ProductDetail/ProductDetail";
 function App() {
   return (
     <Router>
@@ -30,6 +33,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/heart" element={<Heart />} />
+        <Route path="/Cart-page" element={<Cart_page />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/success" element={<Success />} />
+        <Route path="/ProductDetailPage/:id" element={<ProductDetail />} />
       </Routes>
     </Router>
   );

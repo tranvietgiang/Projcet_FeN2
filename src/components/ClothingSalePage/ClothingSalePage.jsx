@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./ClothingSalePage.css";
+import { useNavigate } from "react-router-dom";
 
 import Api from "./Api";
 
@@ -51,6 +52,9 @@ function ClothingSalePage() {
     );
     setFiltered(result);
   };
+
+  // const SearchResults = ({ search, filtered }) => {};
+  const navigate = useNavigate();
 
   return (
     <div className="clothing-sale-page-heart">
@@ -170,16 +174,45 @@ function ClothingSalePage() {
             </div>
           </div>
         </div>
+        {/* search render goods */}
         {search !== "" && (
-          <ul>
+          <ul style={{ padding: 0, maxWidth: 500, margin: "10px auto" }}>
             {filtered.length > 0 ? (
               filtered.map((item) => (
-                <li key={item.id}>
-                  {item.name} - {item.price.toLocaleString()}đ
+                <li
+                  key={item.id}
+                  onClick={() => navigate(`/ProductDetailPage/${item.id}`)}
+                  style={{
+                    listStyle: "none",
+                    marginBottom: "10px",
+                    padding: "10px 15px",
+                    border: "1px solid #ddd",
+                    borderRadius: "8px",
+                    backgroundColor: "#f9f9f9",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    fontFamily: "Arial, sans-serif",
+                    cursor: "pointer",
+                    transition: "0.2s",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.backgroundColor = "#eef5ff")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.backgroundColor = "#f9f9f9")
+                  }
+                >
+                  <span style={{ fontWeight: "500" }}>{item.name}</span>
+                  <span style={{ color: "#2e7d32", fontWeight: "bold" }}>
+                    {item.price.toLocaleString()}đ
+                  </span>
                 </li>
               ))
             ) : (
-              <li>Không tìm thấy sản phẩm nào</li>
+              <li style={{ listStyle: "none", padding: "10px", color: "#999" }}>
+                Không tìm thấy sản phẩm nào
+              </li>
             )}
           </ul>
         )}

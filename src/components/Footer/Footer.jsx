@@ -19,6 +19,7 @@ export default function Footer() {
   ];
   return (
     <footer>
+      {/*phần ảnh hover */}
       <section>
         <div className="mt-5">
           <h2 className="fw-bold ">RECENT POST</h2>
@@ -56,6 +57,139 @@ export default function Footer() {
           </div>
         </div>
       </section>
+
+      <section className="image-slider-wrapper">
+        <div className="image-slider d-flex">
+          {[1, 2, 3, 4, 5, 6].map((num) => (
+            <span key={num}>
+              <img
+                style={{ width: 250 }}
+                className="footer-img-chung object-fit-cover"
+                src={`./footer/footer-${num}.png`}
+                alt=""
+              />
+            </span>
+          ))}
+          {/* Lặp lại lần 2 để tạo hiệu ứng liên tục */}
+          {[1, 2, 3, 4, 5, 6].map((num) => (
+            <span key={`repeat-${num}`}>
+              <img
+                style={{ width: 250 }}
+                className="footer-img-chung object-fit-cover"
+                src={`./footer/footer-${num}.png`}
+                alt=""
+              />
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <footer className="footer bg-dark text-light py-5">
+        <div className="container">
+          <div className="row mb-4">
+            {/* Cột 1: Categories */}
+            <div className="col-md-2">
+              <h6 className="fw-bold text-uppercase">Categories</h6>
+              <ul className="list-unstyled">
+                <li>For Men</li>
+                <li>For Woman</li>
+                <li>Accessories</li>
+                <li>Other</li>
+              </ul>
+            </div>
+
+            {/* Cột 2: Account */}
+            <div className="col-md-2">
+              <h6 className="fw-bold text-uppercase">Account</h6>
+              <ul className="list-unstyled">
+                <li>Wishlist</li>
+                <li>Compare</li>
+                <li>Subscribe</li>
+                <li>Log in</li>
+              </ul>
+            </div>
+
+            {/* Cột 3: Quick Links */}
+            <div className="col-md-2">
+              <h6 className="fw-bold text-uppercase">Quick Links</h6>
+              <ul className="list-unstyled">
+                <li>Shipping & Returns</li>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+                <li>Vacancies</li>
+              </ul>
+            </div>
+
+            {/* Cột 4: Company */}
+            <div className="col-md-2">
+              <h6 className="fw-bold text-uppercase">Company</h6>
+              <ul className="list-unstyled">
+                <li>About us</li>
+                <li>Blog</li>
+                <li>FAQs</li>
+              </ul>
+            </div>
+
+            {/* Cột 5: Support */}
+            <div className="col-md-4">
+              <h6 className="fw-bold text-uppercase">
+                We Offer 24/7 Dedicated Support
+              </h6>
+              <p className="small">If you need support send us a message</p>
+              <p className="mt-2">
+                <i className="fas fa-headphones"></i> Got Questions? Call Us
+                24/7
+                <br />
+                <span className="text-danger fw-bold">(012) 345 000 789</span>
+              </p>
+            </div>
+          </div>
+
+          <hr className="border-secondary" />
+
+          <div className="row align-items-center">
+            {/* Logo + location */}
+            <div className="col-md-4 text-center text-md-start mb-3 mb-md-0">
+              <h3 className="logo">Striz</h3>
+              <p>Box 565, Charlestown, Nevis, West Indies, Caribbean</p>
+              <p>
+                <a
+                  href="mailto:contact@example.com"
+                  className="text-light text-decoration-underline"
+                >
+                  contact@example.com
+                </a>
+              </p>
+              <div className="social-icons">
+                <i className="fab fa-facebook me-2"></i>
+                <i className="fab fa-twitter me-2"></i>
+                <i className="fab fa-instagram me-2"></i>
+                <i className="fab fa-google-plus-g"></i>
+              </div>
+            </div>
+
+            {/* Newsletter */}
+            <div className="col-md-5 offset-md-3">
+              <h6 className="fw-bold text-uppercase">Sign Up For Newsletter</h6>
+              <div className="d-flex">
+                <input
+                  type="email"
+                  className="form-control bg-transparent border-bottom text-white"
+                  placeholder="Enter email address..."
+                  style={{
+                    border: "none",
+                    borderBottom: "1px solid #ccc",
+                    borderRadius: 0,
+                  }}
+                />
+                <button className="btn btn-outline-light ms-2 px-4">
+                  Subscribe →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
       {/* icon */}
       <ul class="wrapper">

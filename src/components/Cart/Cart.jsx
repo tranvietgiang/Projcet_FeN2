@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./Cart.css";
 
 export default function Cart() {
@@ -17,7 +19,7 @@ export default function Cart() {
   }, []);
 
   const changeImage = (index) => {
-    thumbnailsRef.current.forEach((thumb, i) => {
+    thumbnailsRef.current.forEach((thumb) => {
       if (thumb) thumb.classList.remove("active");
     });
     thumbnailsRef.current[index].classList.add("active");
@@ -40,6 +42,12 @@ export default function Cart() {
     setLightboxOpen(false);
     setLightboxSrc("");
   }
+
+  function demo123() {
+    setStock;
+  }
+
+  demo123;
 
   // đánh rating
   const [reviews, setReviews] = useState([
@@ -170,13 +178,31 @@ export default function Cart() {
                     </div>
                   </div>
 
-                  <button className="add-to-cart-button size-cart" href="#">
-                    <i className="bi bi-cart-plus"></i> THÊM VÀO GIỎ
+                  <button className="add-to-cart-button size-cart">
+                    <Link
+                      style={{
+                        textDecoration: "none",
+                        color: "#fff",
+                        fontSize: 15,
+                      }}
+                      to="/Cart-page"
+                    >
+                      THÊM VÀO GIỎ
+                    </Link>
                   </button>
 
                   <button class="btn-17-thich size-cart">
                     <span class="text-container-thich">
-                      <span class="text-thich">Yêu thích</span>
+                      <Link
+                        style={{
+                          textDecoration: "none",
+                          color: "#fff",
+                          fontSize: 15,
+                        }}
+                        to="/heart"
+                      >
+                        <span class="text-thich">Yêu thích</span>
+                      </Link>
                     </span>
                   </button>
                 </div>
