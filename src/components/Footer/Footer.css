@@ -311,3 +311,41 @@
     transform: scale(1.05);
   }
 }
+
+/*ảnh tự di chuyển*/
+.image-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background-color: #fff;
+}
+
+.image-slider {
+  display: flex;
+  animation: scrollSlider 20s linear infinite;
+}
+
+@keyframes scrollSlider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.footer-img-chung {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.footer-img-chung {
+  flex-shrink: 0;
+  margin-right: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-img-chung:hover {
+  transform: scale(1.05); /* phóng to nhẹ */
+  filter: brightness(1.1); /* tăng độ sáng */
+}
