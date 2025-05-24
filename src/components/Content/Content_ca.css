@@ -1,0 +1,158 @@
+.title {
+  margin-top: 50px;
+  position: relative;
+  text-align: center;
+}
+
+.title h2 {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.title h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(128, 82, 82);
+  margin: 0 auto;
+  margin-top: 5px;
+  animation: title2 1s infinite;
+}
+@keyframes title2 {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.products {
+  display: flex;
+  margin: 0 50px;
+}
+
+.product-card {
+  width: 25%;
+  margin: 30px;
+}
+
+.anh .anh_ct img {
+  width: 100%;
+}
+.anh {
+  width: 100%;
+  height: 200px;
+  margin-top: 50px;
+  position: relative;
+}
+.anh_ct {
+  position: absolute;
+  inset: 0;
+}
+.text {
+  position: absolute;
+  inset: 0;
+  top: 200%;
+  left: 10%;
+  z-index: 100;
+  color: aliceblue;
+}
+@keyframes dynamic-glow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 255, 255, 1);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.text h1 {
+  animation: dynamic-glow 2s infinite;
+}
+.sale-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: pulsate 2s infinite;
+  z-index: 99999;
+}
+
+.sale-img:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+}
+
+.title h2 {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 2rem; /* Kích thước chữ */
+  color: #fff; /* Màu chữ */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.7),
+    0 0 15px rgba(0, 255, 255, 0.9);
+  animation: glow 1.5s infinite alternate, slideIn 1s forwards; /* Kết hợp hiệu ứng */
+}
+
+.title h2 {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 2rem; /* Kích thước chữ */
+  color: #724444; /* Màu chữ */
+  animation: blink 1.5s infinite; /* Hiệu ứng nhấp nháy */
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5; /* Giảm độ sáng giữa các lần nhấp nháy */
+  }
+}
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.anh_L,
+.anh_R {
+  transition: transform 1s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.slide-in-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.anh_R {
+  transform: translateX(-100%);
+}
+
+.slide-in-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+.chuchay {
+  z-index: -1000;
+  animation: chuchay 10s linear infinite;
+}
+@keyframes chuchay {
+  0% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(1500px);
+  }
+}
