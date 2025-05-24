@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Cart from "./components/Cart/Cart";
 import Heart from "./components/ClothingSalePage/ClothingSalePage";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import Content_ca from "./components/Content/Content_ca";
 
 function App() {
   return (
@@ -13,12 +14,23 @@ function App() {
       <ScrollToTop />
       <Header />
       <Routes>
-        <Route path="/" element={<Content />} />
+        {/* Trang chủ */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Content />
+              <Content_ca />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* Các trang khác không có Content_ca hoặc Footer */}
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/heart" element={<Heart />} />
       </Routes>
-      <Footer />
     </Router>
   );
 }

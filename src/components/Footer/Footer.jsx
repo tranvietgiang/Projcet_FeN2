@@ -1,7 +1,63 @@
 import "./Footer.css";
 export default function Footer() {
+  const footerData = [
+    {
+      id: 1,
+      image: "./footer/footer-1.png",
+      text: "SHOULD YOU USE A SHAVE CREAM OR SHAVE GEL?",
+    },
+    {
+      id: 2,
+      image: "./footer/footer-2.png",
+      text: "FACE THE NEW YEAR WITH THE REAL SHAVING COMPANY!",
+    },
+    {
+      id: 3,
+      image: "./footer/footer-3.png",
+      text: "FACE THE NEW YEAR WITH THE REAL SHAVING COMPANY!",
+    },
+  ];
   return (
     <footer>
+      <section>
+        <div className="mt-5">
+          <h2 className="fw-bold ">RECENT POST</h2>
+          <p className="text-center">
+            <img src="./footer/footer-7.png" alt="" />
+          </p>
+        </div>
+
+        <div className="container my-5">
+          <div className="container mx-auto px-4">
+            <div className="relative flex justify-center">
+              <div className="background-glow"></div>
+
+              <div className="d-flex gap-5 max-w-6xl relative z-10">
+                {footerData.map((item, index) => (
+                  <div
+                    key={item.id}
+                    className={`footer-column text-center float-animation-${
+                      index + 1
+                    }`}
+                  >
+                    <div className="img-wrapper">
+                      <img
+                        className="footer-img rounded-2xl shadow-lg w-100"
+                        src={item.image}
+                        alt={`Footer ${item.id}`}
+                        loading="lazy"
+                      />
+                    </div>
+                    <p className="footer-text mt-6">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* icon */}
       <ul class="wrapper">
         <li class="icon facebook">
           <span class="tooltip">Facebook</span>
