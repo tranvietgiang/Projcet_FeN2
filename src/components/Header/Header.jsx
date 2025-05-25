@@ -12,30 +12,48 @@ export default function Header() {
     {
       name: "Home",
       path: "/",
-      dropdown: ["Option 1", "Option 2"],
+      dropdown: [
+        { label: "Option 1", path: "/option1" },
+        { label: "Option 2", path: "/option2" },
+      ],
     },
     {
       name: "Shop",
-      dropdown: ["All Products", "Categories", "Brands"],
+      dropdown: [
+        { label: "Categories", path: "/option-product" },
+        { label: "Brands", path: "/shop/brands" },
+      ],
     },
     {
       name: "Product",
-      dropdown: ["New", "Popular"],
+      dropdown: [
+        { label: "All Products", path: "/all-product" },
+        { label: "Popular", path: "/products/popular" },
+      ],
     },
     {
       name: "On Sale",
-      dropdown: null, // không có dropdown
+      path: "/on-sale",
+      dropdown: null,
     },
     {
       name: "Blog",
-      dropdown: ["Latest Posts", "Tags"],
+      dropdown: [
+        { label: "Latest Posts", path: "/blog/latest" },
+        { label: "Tags", path: "/blog/tags" },
+      ],
     },
     {
       name: "Page",
-      dropdown: ["About", "FAQ", "404"],
+      dropdown: [
+        { label: "About", path: "/about" },
+        { label: "FAQ", path: "/faq" },
+        { label: "404", path: "/404" },
+      ],
     },
     {
       name: "Contact",
+      path: "/contact",
       dropdown: null,
     },
   ];
@@ -71,7 +89,13 @@ export default function Header() {
                   <span className="dropdown-arrow">▼</span>
                   <div className="dropdown-menu">
                     {item.dropdown.map((option, index) => (
-                      <span key={index}>{option}</span>
+                      <span
+                        key={index}
+                        onClick={() => navigate(option.path)}
+                        className="dropdown-item"
+                      >
+                        {option.label}
+                      </span>
                     ))}
                   </div>
                 </>
