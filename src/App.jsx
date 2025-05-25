@@ -11,6 +11,8 @@ import Cart_page from "./components/Cart-page/Cart-page";
 import Checkout from "./components/Checkout/Checkout";
 import Success from "./components/Success/Success";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
+import All_product from "./components/All-product/AllProduct";
+import Option_product from "./components/Total-product/option_product";
 function App() {
   return (
     <Router>
@@ -37,6 +39,8 @@ function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/success" element={<Success />} />
         <Route path="/ProductDetailPage/:id" element={<ProductDetail />} />
+        <Route path="/all-product" element={<All_product />} />
+        <Route path="/option-product" element={<Option_product />} />
       </Routes>
     </Router>
   );
