@@ -69,6 +69,8 @@ const MyAccount = () => {
           <div className="detail-item3">
             <h4>MY PERSONAL INFORMATION</h4>
           </div>
+
+          <button class="btn3d">Detail</button>
         </div>
       </div>
     </div>

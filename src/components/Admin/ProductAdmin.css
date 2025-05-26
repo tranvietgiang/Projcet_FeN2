@@ -1,0 +1,265 @@
+/* Hiệu ứng keyframes */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.admin-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #2d3748;
+  color: white;
+  padding: 1rem;
+  animation: slideInLeft 0.5s ease-out;
+}
+
+.admin-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.admin-title:hover {
+  color: #a0aec0;
+  transform: scale(1.05);
+}
+
+.admin-greeting {
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.admin-greeting:hover {
+  color: #a0aec0;
+  transform: scale(1.05);
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.section-title:hover {
+  color: #a0aec0;
+  transform: scale(1.05);
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: transform 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #a0aec0;
+  transform: scale(1.05);
+  padding-left: 10px;
+}
+
+.main-content {
+  width: 80%;
+  padding: 1.5rem;
+  background-color: #edf2f7;
+  animation: fadeIn 0.7s ease-in;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2b6cb0;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.main-title:hover {
+  color: #4a90e2;
+  transform: scale(1.05);
+}
+
+.search-add-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #2b6cb0;
+  box-shadow: 0 0 5px rgba(43, 108, 176, 0.3);
+  outline: none;
+}
+
+.search-button {
+  padding: 0.5rem 1rem;
+  background-color: #e2e8f0;
+  color: #4a5568;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #cbd5e0;
+  transform: scale(1.05);
+  animation: bounce 0.5s;
+}
+
+.add-button {
+  padding: 0.5rem 1rem;
+  background-color: #2b6cb0;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #4a90e2;
+  transform: scale(1.05);
+  animation: bounce 0.5s;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  animation: fadeIn 0.7s ease-in;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: #e2e8f0;
+}
+
+.product-row {
+  transition: background-color 0.3s ease;
+}
+
+.product-row:hover {
+  background-color: #e2e8f0;
+}
+
+.product-image {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-row:hover .product-image {
+  transform: scale(1.1);
+}
+
+.product-name,
+.product-price,
+.product-type {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.product-name:hover,
+.product-price:hover,
+.product-type:hover {
+  color: #2b6cb0;
+  transform: scale(1.05);
+}
+
+.edit-button {
+  padding: 0.25rem 0.5rem;
+  background-color: #2b6cb0;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #4a90e2;
+  transform: scale(1.05);
+  animation: bounce 0.5s;
+}
+
+.delete-button {
+  padding: 0.25rem 0.5rem;
+  background-color: #a0aec0;
+  color: #4a5568;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #cbd5e0;
+  transform: scale(1.05);
+  animation: bounce 0.5s;
+}

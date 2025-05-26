@@ -6,6 +6,7 @@ import Content_ca from "./components/Content/Content_ca";
 import Footer from "./components/Footer/Footer";
 import MyAccount from "./components/Myaccount/Myaccount";
 import Contact from "./components/Contact/Contact";
+import Product_admin from "./components/Admin/Products_admin";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <Route path="/MyAccount" element={<MyAccount />} />
         <Route path="/Contact" element={<Contact />} />
       </Routes>
-
+      {/* <Product_admin /> */}
       <Footer />
     </Router>
   );
