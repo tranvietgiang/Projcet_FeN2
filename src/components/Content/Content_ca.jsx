@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Content_ca.css";
 import Product from "./Product.jsx";
+import { Link } from "react-router-dom";
 
 const Content_ca = () => {
   const [displayedText, setDisplayedText] = useState("");
@@ -46,12 +47,14 @@ const Content_ca = () => {
           <h2>New Arrivals</h2>
         </div>
         <div className="products">
-          <Product
-            image="./image/img/products-1.jpg"
-            name="DENSE SWEAT"
-            category="Outerwear"
-            price="$120.05"
-          />
+          <Link style={{ textDecoration: "none", color: "#000" }} to="/cart">
+            <Product
+              image="./image/img/products-1.jpg"
+              name="DENSE SWEAT"
+              category="Outerwear"
+              price="$120.05"
+            />
+          </Link>
           <Product
             image="./image/img/products-2.jpg"
             name="DENSE SWEAT"

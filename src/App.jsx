@@ -1,4 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { useEffect } from "react";
 import Header from "./components/Header/Header";
 import Login from "./components/Login/Login";
 import Content from "./components/Content/Content";
@@ -13,13 +19,28 @@ import Success from "./components/Success/Success";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
 import All_product from "./components/All-product/AllProduct";
 import Option_product from "./components/Total-product/option_product";
-function App() {
+import Admin_login from "./components/Admin-login/Admin_login";
+import Statistic from "./components/Statistical/Statistical";
+import ONSale from "./components/On-sale/OnSale";
+import Address from "./components/Branch-address/Address";
+
+// Bọc Routes lại bằng 1 component để dùng `useLocation`
+function AppWrapper() {
+  const location = useLocation();
+  const isAdminLogin = location.pathname === "/admin-login";
+  const isStatistic = location.pathname === "/admin-statistic";
+
+  // Scroll to top mỗi khi chuyển trang
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
-    <Router>
-      <ScrollToTop />
-      <Header />
+    <>
+      {!isAdminLogin && <ScrollToTop />}
+      {!isAdminLogin && !isStatistic && <Header />}
+
       <Routes>
-        {/* Trang chủ */}
         <Route
           path="/"
           element={
@@ -30,8 +51,6 @@ function App() {
             </>
           }
         />
-
-        {/* Các trang khác không có Content_ca hoặc Footer */}
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/heart" element={<Heart />} />
@@ -41,7 +60,25 @@ function App() {
         <Route path="/ProductDetailPage/:id" element={<ProductDetail />} />
         <Route path="/all-product" element={<All_product />} />
         <Route path="/option-product" element={<Option_product />} />
+        <Route path="/on-sale" element={<ONSale />} />
+        <Route path="/brands" element={<Address />} />
+
+        {/* Trang đăng nhập Admin */}
+        <Route path="/admin-login" element={<Admin_login />} />
+        <Route path="/admin-statistic" element={<Statistic />} />
       </Routes>
+
+      {!isAdminLogin}
+      {!isStatistic}
+    </>
+  );
+}
+
+// App chính
+function App() {
+  return (
+    <Router>
+      <AppWrapper />
     </Router>
   );
 }
