@@ -21,7 +21,7 @@ export default function Header() {
       name: "Shop",
       dropdown: [
         { label: "Categories", path: "/option-product" },
-        { label: "Brands", path: "/shop/brands" },
+        { label: "Brands", path: "/brands" },
       ],
     },
     {
