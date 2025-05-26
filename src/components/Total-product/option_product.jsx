@@ -19,7 +19,7 @@ const ProductSelector = () => {
       price: 199.99,
       salesCount: 980,
       rating: 4.6,
-      image: "./image/img/img1.png",
+      image: "./image/img/products-1.jpg",
       category: "Electronics",
     },
     {
@@ -28,7 +28,7 @@ const ProductSelector = () => {
       price: 24.99,
       salesCount: 2100,
       rating: 4.9,
-      image: "./image/img/img1.png",
+      image: "./image/img/products-2.jpg",
       category: "Food",
     },
     {
@@ -37,7 +37,7 @@ const ProductSelector = () => {
       price: 45.99,
       salesCount: 850,
       rating: 4.7,
-      image: "./image/img/img1.png",
+      image: "./image/img/img2.png",
       category: "Sports",
     },
     {
@@ -46,7 +46,7 @@ const ProductSelector = () => {
       price: 29.99,
       salesCount: 1800,
       rating: 4.5,
-      image: "./image/img/img1.png",
+      image: "./image/img/img3.png",
       category: "Lifestyle",
     },
     {
@@ -55,7 +55,7 @@ const ProductSelector = () => {
       price: 34.99,
       salesCount: 720,
       rating: 4.4,
-      image: "./image/img/img1.png",
+      image: "./image/img/products-3.jpg",
       category: "Electronics",
     },
     {
@@ -64,7 +64,7 @@ const ProductSelector = () => {
       price: 89.99,
       salesCount: 1500,
       rating: 4.8,
-      image: "./image/img/img1.png",
+      image: "./image/img/products-4.jpg",
       category: "Accessories",
     },
     {
@@ -127,7 +127,7 @@ const ProductSelector = () => {
   };
 
   const styles = {
-    container: {
+    container1: {
       maxWidth: "1200px",
       margin: "0 auto",
       padding: "24px",
@@ -446,7 +446,7 @@ const ProductSelector = () => {
   };
 
   return (
-    <div style={styles.container}>
+    <div style={styles.container1}>
       <h1 style={styles.title}>Product Selector & Sort</h1>
 
       {/* Sort Options */}

@@ -1,0 +1,277 @@
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #f9f9f9; /* Màu nền sáng */
+  border-radius: 8px; /* Đường viền tròn */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+.contact-info {
+  width: 70%;
+  padding-right: 20px;
+  color: #333;
+}
+
+.contact-form {
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form h2 {
+  color: #e63946;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 16px; /* Kích thước chữ */
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #e63946; /* Màu nút */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px; /* Kích thước chữ */
+}
+
+.contact-form button:hover {
+  background-color: #d62839; /* Màu khi hover */
+}
+
+.social-media {
+  margin-top: 20px;
+  text-align: center;
+  color: #333; /* Màu chữ tối */
+}
+
+.sbct {
+  --😀: #644dff;
+  --😀😀: #4836bb;
+  --😀😀😀: #654dff63;
+  cursor: pointer;
+  width: 184px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.125em;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #fff;
+  background: var(--😀);
+  border: 2px solid var(--😀😀);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 0 var(--😀😀);
+  transform: skew(-10deg);
+  transition: all 0.1s ease;
+  filter: drop-shadow(0 15px 20px var(--😀😀😀));
+}
+
+.sbct:active {
+  letter-spacing: 0px;
+  transform: skew(-10deg) translateY(8px);
+  box-shadow: 0 0 0 var(--😀😀😀);
+}
+
+.anhct {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.anhct img {
+  display: block;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.anhct:hover img {
+  content: url("image/img/contact-hover.png"); /* Thay bằng ảnh hover */
+}
+
+.contact {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  opacity: 0;
+  animation: xuathien 2s forwards;
+}
+
+@keyframes xuathien {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) translateX(10px);
+  }
+  30% {
+    transform: translateY(-5px) translateX(-5px);
+  }
+  50% {
+    transform: translateY(5px) translateX(5px);
+  }
+  70% {
+    transform: translateY(-2px) translateX(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+.animated-char {
+  display: inline-block; /* Để mỗi chữ cái được xử lý riêng biệt */
+  opacity: 0; /* Bắt đầu với độ mờ 0 */
+  transform: translateY(20px); /* Dịch chuyển xuống dưới */
+  animation: jump 4s infinite; /* Thay đổi thời gian nếu cần */
+  margin-right: 4px; /* Khoảng cách giữa các ký tự */
+}
+
+@keyframes jump {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px); /* Nhảy lên một chút */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Về vị trí ban đầu */
+  }
+}
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  margin-top: -500px;
+  margin-left: 1100px;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128c7e;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes flip3d {
+  0% {
+    transform: perspective(600px) rotateY(360deg);
+  }
+  100% {
+    transform: perspective(600px) rotateY(0deg);
+  }
+}
+
+.flip3d {
+  animation: flip3d 3s forwards infinite;
+}
+@keyframes shadowLift {
+  0% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+  100% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+  }
+}
+
+.shadow-lift {
+  animation: shadowLift 1s infinite;
+}
+@keyframes skew {
+  0% {
+    transform: skew(0deg);
+  }
+  50% {
+    transform: skew(5deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+.skew {
+  animation: skew 0.5s infinite;
+}
