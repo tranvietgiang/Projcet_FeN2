@@ -37,7 +37,7 @@ export default function Admin_login() {
 
         <button type="submit" class="login-admin-submit">
           <span class="login-admin-sign-text">
-            <Link to="/admin-statistic">Sign in</Link>
+            <Link to="/admin-product">Sign in</Link>
           </span>
         </button>
 

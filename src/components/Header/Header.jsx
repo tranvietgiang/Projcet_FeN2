@@ -54,7 +54,7 @@ export default function Header() {
     {
       name: "Contact",
       path: "/contact",
-      dropdown: null,
+      dropdown: [{ label: "contact", path: "/contact" }],
     },
   ];
 
@@ -107,7 +107,13 @@ export default function Header() {
 
       {/* Icons */}
       <div className="icons">
-        <Search className="icon" />
+        <input
+          type="text"
+          name="text"
+          className="input-ca"
+          required
+          placeholder="Type to search..."
+        />
         <div className="icon-wrapper">
           <Link to="/login">
             <User className="icon" />

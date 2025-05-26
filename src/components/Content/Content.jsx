@@ -168,7 +168,6 @@ export default function Content() {
                     width: 500,
                     height: 200,
                     marginTop: -50,
-                    marginLeft: -10,
                   }}
                   key={imageArr[currentIndex].img3}
                   src={imageArr[currentIndex].img3}

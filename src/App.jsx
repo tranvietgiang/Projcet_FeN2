@@ -23,12 +23,16 @@ import Admin_login from "./components/Admin-login/Admin_login";
 import Statistic from "./components/Statistical/Statistical";
 import ONSale from "./components/On-sale/OnSale";
 import Address from "./components/Branch-address/Address";
+import Contact from "./components/Contact/Contact";
+import MyAccount from "./components/Myaccount/Myaccount";
+import AdminCa from "./components/Admin-ca/Products_admin";
 
 // Bọc Routes lại bằng 1 component để dùng `useLocation`
 function AppWrapper() {
   const location = useLocation();
   const isAdminLogin = location.pathname === "/admin-login";
   const isStatistic = location.pathname === "/admin-statistic";
+  const isAdminCa = location.pathname === "/admin-product";
 
   // Scroll to top mỗi khi chuyển trang
   useEffect(() => {
@@ -38,7 +42,7 @@ function AppWrapper() {
   return (
     <>
       {!isAdminLogin && <ScrollToTop />}
-      {!isAdminLogin && !isStatistic && <Header />}
+      {!isAdminLogin && !isStatistic && !isAdminCa && <Header />}
 
       <Routes>
         <Route
@@ -62,14 +66,18 @@ function AppWrapper() {
         <Route path="/option-product" element={<Option_product />} />
         <Route path="/on-sale" element={<ONSale />} />
         <Route path="/brands" element={<Address />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/myAccount" element={<MyAccount />} />
 
         {/* Trang đăng nhập Admin */}
         <Route path="/admin-login" element={<Admin_login />} />
         <Route path="/admin-statistic" element={<Statistic />} />
+        <Route path="/admin-product" element={<AdminCa />} />
       </Routes>
 
       {!isAdminLogin}
       {!isStatistic}
+      {!isAdminCa}
     </>
   );
 }
