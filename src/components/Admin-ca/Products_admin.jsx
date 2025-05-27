@@ -56,7 +56,7 @@ const Product_admin = () => {
             </a>
           </li>
           <li>
-            <a href="" className="admin-product-ca-nav-link">
+            <a href="/admin-cate" className="admin-product-ca-nav-link">
               Quản lý loại
             </a>
           </li>
